@@ -9,12 +9,15 @@ app.use(cors());
 
 app.get('/location', (request, response) => {
     try {
+        console.log(request.query);
         const location = request.query.location;
+        console.log(location);
         const result = getLatLng(location);
+        console.log(result);
         response.status(200).json(result);
     }
     catch (err) {
-        response.status(500).send('Sorry something went wrong, please try again.');
+        response.status(500).send('Sorry EVERYTHING went wrong, please try again.');
     }
 });
 
