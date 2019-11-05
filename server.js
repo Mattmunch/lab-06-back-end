@@ -8,6 +8,7 @@ const PORT = process.env.PORT;
 app.use(cors());
 
 app.get('/location', (request, response) => {
+    console.log('hello');
     try {
         console.log(request.query);
         const location = request.query.location;
