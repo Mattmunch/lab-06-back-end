@@ -40,9 +40,9 @@ const getWeatherResponse = async(lat, lng) => {
     
     return mundgedArray;
 };
-const getYelpResponse = async(lat, lng) => {
-    cosnt yelpData = await superagent.get()
-}
+// const getYelpResponse = async(lat, lng) => {
+//     cosnt yelpData = await superagent.get()
+// }
 
 // const getEventResponse = async(lat, lng) => {
 //     const eventData = await superagent.get('https://www.eventbriteapi.com/v3/users/me/?token=HK2JOUEQYIUWCLIXJMXE');
@@ -76,10 +76,10 @@ app.get('/weather', async(req, res) => {
 
     res.json(weatherObject);
 });
-app.get('/yelp', async(req, res) => {
-    const yelpObject = await getYelpResponse(latlngs.latitude, latlngs.longitude);
-    console.log('ToDo: Using this search with api', yelpObject);
-});
+// app.get('/yelp', async(req, res) => {
+//     const yelpObject = await getYelpResponse(latlngs.latitude, latlngs.longitude);
+//     console.log('ToDo: Using this search with api', yelpObject);
+// });
 
 // app.get('/events', async(req, res) => {
 //     const eventObject = await getEventResponse(latlngs.latitude, latlngs.longitude);
